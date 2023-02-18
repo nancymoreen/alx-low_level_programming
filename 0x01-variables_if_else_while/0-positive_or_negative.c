@@ -3,7 +3,8 @@
 #include <stdio.h>
 
 /**
- * main - Determing whether a number is positive , negative or equates to 0.
+ * main - Determining whether a number is positive , negative or equates to 0.
+ *
  * Return: Always 0
  */
 int main(void)
@@ -26,4 +27,3 @@ int main(void)
 	}
 	return (0);
 }
-
