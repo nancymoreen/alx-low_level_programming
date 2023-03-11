@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <ctype.h>
 /**
  * main - prints the sum of two positive numbers
  * @argc: argument count
@@ -12,33 +11,35 @@
 
 int main(int argc, char *argv[])
 {
-	int x;
-	unsigned int y, sum = 0;
-	char *c;
+	int i;
+	unsigned int k, sum = 0;
+	char *e;
 
 	if (argc > 1)
 	{
-		for (x = 1; x < argc; x++)
+		for (i = 1; i < argc; i++)
 		{
-			c = argv[x];
+			e = argv[i];
 
-			for (y = 0; y < strlen(c); y++)
+			for (k = 0; k < strlen(e); k++)
 			{
-				if (c[y] < 48 || c[y] > 57)
+				if (e[k] < 48 || e[k] > 57)
 				{
 					printf("Error\n");
 					return (1);
 				}
-
-				sum += atoi(c);
-				c++;
 			}
-			printf("%d\n", sum);
+
+			sum += atoi(e);
+			e++;
 		}
-		else
-		{
-			printf("0\n");
-		}
+
+		printf("%d\n", sum);
 	}
+	else
+	{
+		printf("0\n");
+	}
+
 	return (0);
 }
