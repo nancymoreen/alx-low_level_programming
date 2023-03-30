@@ -2,12 +2,12 @@
 #include <stdlib.h>
 
 /**
- * main - prints the opcodes of its main function
- * @argc: argument count
- * @argv: argument vector
- * Return: always 0
+ * main - prints its own opcodes
+ * @argc: number of arguments
+ * @argv: array of arguments
+ *
+ * Return: Always 0 (Success)
  */
-
 int main(int argc, char *argv[])
 {
 	int bytes, i;
@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 2)
 	{
-		printf("EWrror\n");
+		printf("Error\n");
 		exit(1);
 	}
 
@@ -33,12 +33,10 @@ int main(int argc, char *argv[])
 	{
 		if (i == bytes - 1)
 		{
-			printf("%02hhx", arr[i]);
+			printf("%02hhx\n", arr[i]);
 			break;
 		}
-
-		printf("%02hhx", arr[i]);
+		printf("%02hhx ", arr[i]);
 	}
-
-		return (0);
+	return (0);
 }
